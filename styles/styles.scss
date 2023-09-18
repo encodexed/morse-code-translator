@@ -74,37 +74,41 @@ section {
 	}
 }
 
-.text-fields {
+.operations {
 	display: flex;
 	justify-content: center;
 	gap: 5px;
-}
 
-.input-container {
-	padding: 3px;
-	width: 300px;
-	height: 400px;
-}
+	&__input-container {
+		padding: 3px;
+		width: 300px;
+		height: 400px;
 
-.arrow-container {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	padding-left: 6px;
-}
+		&__text-field {
+			padding: 3px;
+			width: 100%;
+			height: 90%;
+			background-color: #a7bbc9;
+			border: 1px solid #194664;
+		}
+	}
 
-.output-container {
-	padding: 3px;
-	width: 300px;
-	height: 400px;
-}
+	&__arrow-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		padding-left: 6px;
+	}
 
-.text-field {
-	padding: 3px;
-	width: 100%;
-	height: 90%;
-	background-color: #a7bbc9;
-	border: 1px solid #194664;
+	&__output-container {
+		padding: 3px;
+		width: 300px;
+		height: 400px;
+
+		&__text-field {
+			@extend .operations__input-container__text-field;
+		}
+	}
 }
 
 footer {

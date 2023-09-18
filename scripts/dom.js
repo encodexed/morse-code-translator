@@ -7,6 +7,7 @@ const outputField = document.querySelector("#output");
 const delimiterField = document.querySelector("#delimiter");
 const feedbackPara = document.querySelector("#feedback");
 
+// On every change to the textarea, the translation is updated
 const updateOutput = () => {
 	const input = inputField.value;
 	const delimiter = delimiterField.value;
