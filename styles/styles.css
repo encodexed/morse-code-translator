@@ -1,5 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Mono", monospace;
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 30px;
+}
+
 body {
-  background-color: red;
+  background: rgb(241, 121, 121);
+  background: linear-gradient(90deg, rgb(241, 121, 121) 0%, rgb(120, 218, 241) 100%);
+}
+
+h1 {
+  text-align: center;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
+textarea {
+  border: 1px solid rgb(120, 218, 241);
+  padding: 3px;
+  width: 100%;
+  width: 240px;
+  height: 100%;
+  min-height: 300px;
+}
+
+p {
+  font-size: 18px;
+}
+
+.input-container, .output-container {
+  margin: 20px;
+  width: 240px;
+  height: 100%;
+  min-height: 300px;
+}
+
+.output-container {
+  border: 1px solid rgb(241, 121, 121);
+  background-color: white;
+  padding: 3px;
+}
+
+.arrow-container {
+  display: flex;
+  align-items: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

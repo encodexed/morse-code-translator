@@ -3,12 +3,43 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="./styles/styles.css" />
-		<script defer src="./scripts/sum.js"></script>
+		<script type="module" src="./scripts/dom.js" defer></script>
 		<title>Morse Code Translator</title>
 	</head>
 	<body>
 		<h1>Morse Code Translator</h1>
-		<p>This is a translator app :)</p>
+		<main>
+			<section class="options">
+				<label>
+					Delimiter:
+					<input id="delimiter" type="text" maxlength="10" value="|" />
+				</label>
+			</section>
+			<section class="inputs">
+				<div class="input-container">
+					<textarea
+						id="input"
+						placeholder="Enter morse code or english here"
+						rows="10"
+					></textarea>
+				</div>
+				<div class="arrow-container">
+					<div class="arrow">--></div>
+				</div>
+				<div class="output-container">
+					<p id="output"></p>
+				</div>
+			</section>
+			<div class="button-container">
+				<button id="switchBtn">Switch input with output</button>
+			</div>
+		</main>
 	</body>
 </html>
