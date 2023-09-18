@@ -3,19 +3,43 @@
   padding: 0;
   font-family: "Roboto Mono", monospace;
   font-size: 18px;
+  color: #101d1e;
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 36px;
 }
 
 body {
-  background: rgb(241, 121, 121);
-  background: linear-gradient(90deg, rgb(241, 121, 121) 0%, rgb(120, 218, 241) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #b4b7b6;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+img {
+  width: 100%;
+  min-width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
 }
 
 h1 {
   text-align: center;
+}
+
+.subtitle {
+  max-width: 65%;
 }
 
 section {
@@ -23,40 +47,75 @@ section {
   justify-content: center;
 }
 
-textarea {
-  border: 1px solid rgb(120, 218, 241);
+.delimiter-container {
+  display: flex;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 12px;
+}
+.delimiter-container div {
+  width: 50%;
+}
+.delimiter-label {
+  text-align: right;
+}
+.delimiter-input input {
+  margin: 1px;
+  padding: 2px;
+  width: 108px;
+  background-color: #a7bbc9;
+  border: 1px solid #194664;
+}
+
+.text-fields {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.input-container {
   padding: 3px;
-  width: 100%;
-  width: 240px;
-  height: 100%;
-  min-height: 300px;
-}
-
-p {
-  font-size: 18px;
-}
-
-.input-container, .output-container {
-  margin: 20px;
-  width: 240px;
-  height: 100%;
-  min-height: 300px;
-}
-
-.output-container {
-  border: 1px solid rgb(241, 121, 121);
-  background-color: white;
-  padding: 3px;
+  width: 300px;
+  height: 400px;
 }
 
 .arrow-container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 6px;
 }
 
-.button-container {
+.output-container {
+  padding: 3px;
+  width: 300px;
+  height: 400px;
+}
+
+.text-field {
+  padding: 3px;
+  width: 100%;
+  height: 90%;
+  background-color: #a7bbc9;
+  border: 1px solid #194664;
+}
+
+footer {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+footer button {
+  width: 230px;
+  margin-left: 6px;
+}
+
+#feedback {
+  color: red;
+  margin-bottom: 5px;
 }
 
 /*# sourceMappingURL=styles.css.map */

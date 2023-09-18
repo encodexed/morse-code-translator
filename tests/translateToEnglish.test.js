@@ -46,6 +46,15 @@ describe("Applies proper formatting", () => {
 });
 
 describe("Handles edge cases and errors", () => {
+	it("throws an error when the Morse code has no English equivalent", () => {
+		expect(() => translateToEnglish("..--", "|")).toThrow(
+			"Morse code character not recognised"
+		);
+		expect(() => translateToEnglish("---------", "|")).toThrow(
+			"Morse code character not recognised"
+		);
+	});
+
 	it("throws an error with invalid input", () => {
 		expect(() => translateToEnglish("%", "|")).toThrow(
 			"Input contains unrecogniseable characters"

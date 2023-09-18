@@ -5,6 +5,7 @@ import { translateToEnglish } from "./translateToEnglish.js";
 const inputField = document.querySelector("#input");
 const outputField = document.querySelector("#output");
 const delimiterField = document.querySelector("#delimiter");
+const feedbackPara = document.querySelector("#feedback");
 
 const updateOutput = () => {
 	const input = inputField.value;
@@ -16,8 +17,9 @@ const updateOutput = () => {
 			: translateToEnglish(input, delimiter);
 
 		outputField.innerHTML = output;
-	} catch (error) {
-		console.log(error.message);
+		feedbackPara.innerText = "";
+	} catch (e) {
+		feedbackPara.innerText = e.message;
 	}
 };
 

@@ -14,32 +14,75 @@
 		<title>Morse Code Translator</title>
 	</head>
 	<body>
-		<h1>Morse Code Translator</h1>
+		<header>
+			<img
+				src="./assets/header-img.jpg"
+				alt="Old picture of a communications room, with people working at desks with morse code machines"
+			/>
+			<h1>Morse Code Translator</h1>
+			<p class="subtitle">
+				Enter English text or Morse code into the input field and it will be
+				translated to the output field
+			</p>
+		</header>
 		<main>
-			<section class="options">
-				<label>
-					Delimiter:
-					<input id="delimiter" type="text" maxlength="10" value="|" />
-				</label>
-			</section>
-			<section class="inputs">
+			<section class="text-fields">
 				<div class="input-container">
-					<textarea
-						id="input"
-						placeholder="Enter morse code or english here"
-						rows="10"
-					></textarea>
+					<p>Input:</p>
+					<textarea id="input" class="text-field"></textarea>
 				</div>
 				<div class="arrow-container">
-					<div class="arrow">--></div>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						height="24"
+						viewBox="0 -960 960 960"
+						width="24"
+						fill="currentColor"
+					>
+						<path
+							d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"
+						/>
+					</svg>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						height="24"
+						viewBox="0 -960 960 960"
+						width="24"
+						fill="currentColor"
+					>
+						<path
+							d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"
+						/>
+					</svg>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						height="24"
+						viewBox="0 -960 960 960"
+						width="24"
+						fill="currentColor"
+					>
+						<path
+							d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"
+						/>
+					</svg>
 				</div>
 				<div class="output-container">
-					<p id="output"></p>
+					<p>Output:</p>
+					<p id="output" class="text-field"></p>
 				</div>
 			</section>
-			<div class="button-container">
-				<button id="switchBtn">Switch input with output</button>
-			</div>
+			<section class="delimiter-container">
+				<div class="delimiter-label">
+					<label for="delimiter"> Delimiter:</label>
+				</div>
+				<div class="delimiter-input">
+					<input id="delimiter" type="text" maxlength="5" value="|" />
+				</div>
+			</section>
 		</main>
+		<footer>
+			<p id="feedback"></p>
+			<button id="switchBtn">Switch input with output</button>
+		</footer>
 	</body>
 </html>
