@@ -3,12 +3,89 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="./styles/styles.css" />
-		<script defer src="./scripts/sum.js"></script>
+		<script type="module" src="./scripts/dom.js" defer></script>
 		<title>Morse Code Translator</title>
 	</head>
 	<body>
-		<h1>Morse Code Translator</h1>
-		<p>This is a translator app :)</p>
+		<header>
+			<img
+				src="./assets/header-img.jpg"
+				alt="Old picture of a communications room, with people working at desks with morse code machines"
+			/>
+			<h1>Morse Code Translator</h1>
+			<p class="subtitle">
+				Enter English text or Morse code into the input field and it will be
+				translated to the output field
+			</p>
+		</header>
+		<main>
+			<section class="operations">
+				<div class="operations__input-container">
+					<p>Input:</p>
+					<textarea
+						id="input"
+						class="operations__input-container__text-field"
+					></textarea>
+				</div>
+				<div class="operations__arrow-container">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						height="24"
+						viewBox="0 -960 960 960"
+						width="24"
+						fill="currentColor"
+					>
+						<path
+							d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"
+						/>
+					</svg>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						height="24"
+						viewBox="0 -960 960 960"
+						width="24"
+						fill="currentColor"
+					>
+						<path
+							d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"
+						/>
+					</svg>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						height="24"
+						viewBox="0 -960 960 960"
+						width="24"
+						fill="currentColor"
+					>
+						<path
+							d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"
+						/>
+					</svg>
+				</div>
+				<div class="operations__output-container">
+					<p>Output:</p>
+					<p id="output" class="operations__output-container__text-field"></p>
+				</div>
+			</section>
+			<section class="delimiter-container">
+				<div class="delimiter-label">
+					<label for="delimiter"> Delimiter:</label>
+				</div>
+				<div class="delimiter-input">
+					<input id="delimiter" type="text" maxlength="5" value="|" />
+				</div>
+			</section>
+		</main>
+		<footer>
+			<p id="feedback"></p>
+			<button id="switchBtn">Switch input with output</button>
+		</footer>
 	</body>
 </html>

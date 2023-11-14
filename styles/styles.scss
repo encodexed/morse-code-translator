@@ -1,3 +1,147 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto Mono", monospace;
+	font-size: 18px;
+	color: #101d1e;
+
+	@media only screen and (max-width: 576px) {
+		font-size: 14px;
+	}
+}
+
+h1 {
+	font-size: 36px;
+
+	@media only screen and (max-width: 576px) {
+		font-size: 24px;
+	}
+}
+
 body {
-	background-color: red;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #b4b7b6;
+}
+
+header {
+	width: 100%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+img {
+	width: 100%;
+	min-width: 100%;
+	height: auto;
+	max-height: 400px;
+	object-fit: cover;
+}
+
+h1 {
+	margin-top: 10px;
+	text-align: center;
+}
+
+.subtitle {
+	max-width: 65%;
+}
+
+section {
+	display: flex;
+	justify-content: center;
+}
+
+.delimiter {
+	&-container {
+		display: flex;
+		height: 35px;
+		justify-content: center;
+		align-items: center;
+		gap: 5px;
+		margin-bottom: 12px;
+
+		& div {
+			width: 50%;
+		}
+	}
+
+	&-label {
+		text-align: right;
+	}
+
+	&-input input {
+		margin: 1px;
+		padding: 2px;
+		width: 108px;
+		background-color: #a7bbc9;
+		border: 1px solid #194664;
+	}
+}
+
+.operations {
+	display: flex;
+	justify-content: center;
+	gap: 5px;
+
+	@media only screen and (max-width: 768px) {
+		flex-direction: column;
+	}
+
+	&__input-container {
+		padding: 3px;
+		width: 300px;
+		height: 400px;
+
+		&__text-field {
+			padding: 3px;
+			width: 100%;
+			height: 90%;
+			background-color: #a7bbc9;
+			border: 1px solid #194664;
+		}
+	}
+
+	&__arrow-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		padding-left: 6px;
+
+		@media only screen and (max-width: 768px) {
+			display: none;
+		}
+	}
+
+	&__output-container {
+		padding: 3px;
+		width: 300px;
+		height: 400px;
+
+		&__text-field {
+			@extend .operations__input-container__text-field;
+		}
+	}
+}
+
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 30px;
+
+	& button {
+		width: 230px;
+		margin-left: 6px;
+	}
+}
+
+#feedback {
+	color: red;
+	margin-bottom: 5px;
 }
