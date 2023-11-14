@@ -2,7 +2,9 @@
 
 ## Demo & Snippets
 
-Image goes here
+![morse-homepage](https://github.com/encodexed/morse-code-translator/assets/107448691/30d4fa14-9af4-4ae8-a93e-2f522588e9a2)
+
+Full size image: [Home Page](https://res.cloudinary.com/dihtw7wct/image/upload/v1699942809/morse-code_gw5ewl.png)
 
 ---
 
